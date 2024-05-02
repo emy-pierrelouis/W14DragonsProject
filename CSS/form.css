@@ -1,0 +1,62 @@
+/* CSS specific to the form*/
+fieldset
+{
+    width: 60%;
+    border-color: #73A3A2;
+}
+
+legend
+{
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+label
+{
+    font-weight: 600;
+}
+
+input
+{
+    caret-color: #CF692C;
+}
+
+.disp-none
+{
+    display: none;
+}
+
+.form-color
+{
+    color:#F3EBEA;
+}
+
+.info-search
+{
+    font-size: 0.8em;
+    font-weight: 350;
+    background-color: #F3EBEA; 
+    margin: 10px;
+    padding: 10px;
+}
+
+.spacing-form, .spacing-terms
+{
+    margin: 10px;
+}
+
+.terms-title
+{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.terms-desc
+{
+    cursor:crosshair;
+    font-weight:light;
+}
+    .terms-desc:hover
+    {
+        background-color: #D5904F;
+    }

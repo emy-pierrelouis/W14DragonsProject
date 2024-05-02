@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ignis Aeternus 🔥</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CSS\main.css">
+        <link rel="stylesheet" href="CSS\form.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    </head>  
+
+    <body>
+        <header class="nav-head flex flex-column flex-alignc"">
+            <div class="nav-company flex flex-column flex-alignc flex-justcenter">
+                <p class="company-name">Ignis Aeternus Company</h1>
+                <p class="company-slogan">Where Dragons Soar, Dreams Ignite</h3>
+            </div>
+
+            <nav>	 
+                <ul class="nav-bar flex flex-alignc flex-justcenter">
+                    <li class="nav-links"><a href="index.html">Home</a></li>
+                    <li class="nav-links"><a href="dragons.html">Catalog</a></li>
+                    <li class="nav-links"><a href="sanctuaries.html">Network</a></li>
+                    <li class="nav-links"><a href="faq.html">FAQ</a></li>
+                    <li class="nav-links"><a href="purchase.html">Purchase</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form id="form" action="./" class="flex flex-wrap flex-justcenter flex-alignc flex-column">
+                <h1>Dragon Acquisition Application</h1>
+                
+                <fieldset class="rounded">
+                    <legend class="form-color">Disclaimer</legend>
+
+                    <div class="spacing-form">
+                        <p class="info-search rounded">The minimum legal age for dragon ownership is 16 years. Please note that we can only accept purchase forms from individuals who meet this age requirement. Upon dragon egg pickup, we kindly request that you provide the requisite permits and valid forms of identification to facilitate the purchase. Please be aware that, in compliance with the minimum age requirement, we will not release the dragon if these conditions are not met. More information [<a href="faq.html">here</a>].</p>
+                        <label for="agree" class="form-color">I understand.</label>
+                        <input id="agree-age" type="radio" name="agree" value="1" onclick="agreeForm()">
+                        <label for="agree" class="form-color">I disagree.</label>
+                        <input id="disagree-age" type="radio" name="agree" value="0" onclick="disagreeForm()"> <!--reminder to put the same name for radio buttons or else you can have both...-->
+                    </div>
+                </fieldset>
+
+                <fieldset id="selection" class="purchase rounded disp-none">
+                    <legend class="form-color"> Dragon Selection and Breeding Preferences</legend>
+
+                    <div class="spacing-form">
+                        <label for="experience" class="form-color">Dragon Handling Proficiency:</label>
+                        <p class="info-search rounded">Depending on your proficiency, you may not be allowed to purchase your desired dragon. More information [<a href="faq.html">here</a>].</p>
+                        <input id="novice" type="radio" name="experience" value="novice" aria-describedby="info-search" checked>
+                        <label for="novice" class="form-color">Novice</label>
+                        <input id="beginner" type="radio" name="experience" value="beginner">
+                        <label for="beginner" class="form-color">Beginner</label>
+                        <input id="intermediate" type="radio" name="experience" value="intermediate">
+                        <label for="intermediate" class="form-color">Intermediate</label>
+                        <input id="proficient" type="radio" name="experience" value="proficient">
+                        <label for="proficient" class="form-color">Proficient</label>
+                        <input id="advanced" type="radio" name="experience" value="advanced">
+                        <label for="advanced" class="form-color">Advanced</label>
+                        <input id="expert" type="radio" name="experience" value="expert">
+                        <label for="expert" class="form-color">Expert</label>
+                    </div>
+                    
+
+                    <div class="spacing-form">
+                        <label for="breeder" class="form-color">Selected Breeding Sanctuary:</label>
+                        <p class="info-search rounded">Information on the sanctuary can be found [<a href="sanctuary.html">here</a>].</p>
+                        <input id="breeder" name="breeder" list="sanctuary" aria-describedby="info-search" required>
+                        <datalist id="sanctuary">
+                            <select>
+                                <option value="Dragagon Drakes"></option>
+                                <option value="Deainuis Dragonry"></option>
+                                <option value="Inginiss Guardians"></option>
+                                <option value="Dregicess Enclaves"></option>
+                                <option value="Celestria Skyscapes"></option>
+                                <option value="Auroradawn Keep"></option>
+                                <option value="Veridinia Hatchery"></option>
+                                <option value="Solstice Sanctums"></option>
+                                <option value="Mystiqe Magesparks"></option>
+                            </select>
+                        </datalist>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="type" class="form-color">Preferred Dragon Species:</label>
+                        <p class="info-search rounded">Information on different kind of species can be found [<a href="dragons.html">here</a>].</p>
+                        <input id="type" name="type" list="dragon-species" aria-describedby="info-search" required>
+                        <datalist id="dragon-species">
+                            <select>
+                                <option value="Dragon"></option>
+                                <option value="Drake"></option>
+                                <option value="Wyvern"></option>
+                                <option value="Wyrm"></option>
+                                <option value="Leviathan"></option>
+                                <option value="Sea Serpent"></option>
+                                <option value="Quetzalcoatl"></option>
+                                <option value="Landwyrm"></option>
+                            </select>
+                        </datalist>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="breed" class="form-color">Desired Dragon Breed:</label>
+                        <p class="info-search rounded">List and information of available dragons can be found [<a href="dragons.html">here</a>]. Additionally, it is important to note that it may take longer for seasonal, rare, limited and protected dragons to be delivered.</p>
+                        <input id="dragon-breed" name="dragon-breeds" list="dragon-breeds" aria-describedby="info-search" required>
+                        <datalist id="dragon-breeds">
+                            <select>
+                                <option value="Flameheart Drakes"></option>
+                                <option value="Silverscale Drakes"></option>
+                                <option value="Crimsonscale Drakes"></option>
+                                <option value="Sapphire Drakes"></option>
+                                <option value="Jadehide Drakes"></option>
+                                <option value="Rustscale Drakes"></option>
+                                <option value="Emberheart Drakes"></option>
+                                <option value="Amberhide Drakes"></option>
+                                <option value="Frostscale Wyverns"></option>
+                                <option value="Aurorafin Wyverns"></option>
+                                <option value="Mystic Wyverns"></option>
+                                <option value="Galeshadow Wyverns"></option>
+                                <option value="Thunderscale Wyverns"></option>
+                                <option value="Quillfeather Wyverns"></option>
+                                <option value="Azureglide Wyverns"></option>
+                                <option value="Glowstrike Wyverns"></option>
+                                <option value="Cobalt Wyverns"></option>
+                                <option value="Cerulean Wyverns"></option>
+                                <option value="Obsidian Wyverns"></option>
+                                <option value="Mistral Wyverns"></option>
+                                <option value="Runic Wyverns"></option>
+                                <option value="Petalflare Wyverns"></option>
+                                <option value="Crystalwing Dragons"></option>
+                                <option value="Shadowcoil Dragons"></option>
+                                <option value="Dawnstrike Dragons"></option>
+                                <option value="Eclipseclaw Dragons"></option>
+                                <option value="Stormwing Dragons"></option>
+                                <option value="Emberclaw Dragons"></option>
+                                <option value="Opalescent Dragons"></option>
+                                <option value="Topazscale Dragons"></option>
+                                <option value="Gloomwing Dragons"></option>
+                                <option value="Ivoryscale Dragons"></option>
+                                <option value="Echowave Dragons"></option>
+                                <option value="Glimmerwing Dragons"></option>
+                                <option value="Sandflare Dragons"></option>
+                                <option value="Eldertide Dragons"></option>
+                                <option value="Ironscale Dragons"></option>
+                                <option value="Sunflare Dragons"></option>
+                                <option value="Frostveil Dragons"></option>
+                                <option value="Verdelight Dragons"></option>
+                                <option value="Celestial Dragons"></option>
+                                <option value="Blossomwing Dragons"></option>
+                                <option value="Aurorafin Dragons"></option>
+                                <option value="Verdeflame Dragons"></option>
+                                <option value="Shadowfire Wyrms"></option>
+                                <option value="Mistveil Wyrms"></option>
+                                <option value="Lavabane Wyrms"></option>
+                                <option value="Mossback Wyrms"></option>
+                                <option value="Luminoscale Wyrms"></option>
+                                <option value="Umbravale Wyrms"></option>
+                                <option value="Cinderflow Wyrms"></option>
+                                <option value="Nebulight Wyrms"></option>
+                                <option value="Verdevine Wyrms"></option>
+                                <option value="Magma Leviathans"></option>
+                                <option value="Glaciermaw Leviathans"></option>
+                                <option value="Abyssal Leviathans"></option>
+                                <option value="Tidesurge Sea Serpents"></option>
+                                <option value="Crystalfin Sea Serpents"></option>
+                                <option value="Aquaflair Sea Serpents"></option>
+                                <option value="Skyfire Quetzalcoatl"></option>
+                                <option value="Aurorapulse Quetzalcoatls"></option>
+                                <option value="Zephyrflare Quetzalcoatls"></option>
+                                <option value="Iridescent Quetzalcoatls"></option>
+                                <option value="Nimbus Quetzalcoatls"></option>
+                                <option value="Sylvanbark Landwyrms"></option>
+                                <option value="Celestialspark Landwyrms"></option>
+                                <option value="Terravine Landwyrms"></option>
+                                <option value="Embercrust Landwyrms"></option>
+                                <option value="Ironspine Landwyrms"></option>
+                                <option value="Thornroot Landwyrms"></option>
+                                <option value="Boulderback Landwyrms"></option>
+                                <option value="Sandshifter Landwyrms"></option>
+                                <option value="Canyoncarver Landwyrms"></option>
+                                <option value="Mosscrest Landwyrms"></option>
+                            </select>
+                        </datalist>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="colour" class="form-color">Prefered Scales Colours</label>
+                        <p class="info-search rounded">Make sure to select colours close to the range of your desired breed's colours. More information [<a href="dragons.html">here</a>].</p>
+                        <div id="picker"></div>
+                    </div>
+                </fieldset>
+
+                <fieldset id="persoInfo" class="rounded disp-none">
+                    <legend class="form-color">Contact Information</legend>
+
+                    <div class="spacing-form">
+                        <label for="first-name" class="form-color">First name: </label>
+                        <input id="first-name" name="firstname" required>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="middle-name" class="form-color">Middle name: </label>
+                        <input id="middle-name" name="middlename">
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="last-name" class="form-color">Last name: </label>
+                        <input id="last-name" name="surname" required>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="birthday" class="form-color">Date of Birth: </label>
+                        <input id="birthday" type="date" name="birthday" required>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="email" class="form-color">Email:</label>
+                        <input id="email" required type=email name="email" placeholder="youremail@domain.com" required> 
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="phone" class="form-color">Phone number: </label>
+                        <input id="phone" type="tel" name="phone" placeholder="(###) ###-####" pattern="/^[(]\d{3}[)]\s\d{3}[-]\d{4}$" inputmode="tel" required>
+                    </div>
+                </fieldset>
+
+                <fieldset id="docuInfo" class="rounded disp-none">
+                    <legend class="form-color">Documentation and Credentials</legend>
+
+                    <div class="spacing-form">
+                        <label for="standard-license" class="form-color">Standard Dragon Ownership License: </label>
+                        <input id="standard-license" name="license" placeholder="AAA# #### ##A# #AA#"required>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="advanced-license" class="form-color">Advanced Dragon Ownership License: </label>
+                        <input id="advanced-license" type="checkbox" name="license">
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="protected-license" class="form-color">Protected Dragon Ownership License: </label>
+                        <input id="protected-license" type="checkbox" name="license">
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="dragon-care" class="form-color">Dragon Care and Handling Proficiency Certification(s): </label>
+                        <input id="dragon-care" type="file" name="documentation" accept="image/png, image/jpeg">
+                    </div>
+                </fieldset>
+
+                <fieldset id="paymentInfo" class="rounded disp-none">
+                    <legend class="form-color">Payment Information</legend>
+
+                    <div class="spacing-form">
+                        <label for="card-name" class="form-color">Cardholder's Name:</label>
+                        <input id="cardholder" name="cardholder" required>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="card" class="form-color">Card Number:</label>
+                        <input id="credit" type="tel" minlength="15" maxlength="16" required>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="valid" class="form-color">Valid until:</label>
+                        <input id="valid-month" type="month" required>
+                    </div>
+
+                    <div class="spacing-form">
+                        <label for="credit" class="form-color">CVC</label>
+                        <input id="cvc" type="password" minlength="3" maxlength="3" required>
+                    </div>
+                </fieldset>
+
+                <fieldset id="termsAndcons" class="rounded disp-none">
+                    <legend class="form-color">Terms and Conditions</legend>
+
+                    <p class="terms-title form-color">1. Estimated Availability:</p>
+                    <div class="spacing-terms">
+                        <ul>
+                            <li class="terms-desc form-color">Common dragons: Estimated delivery within 1-2 weeks.</li>
+                            <li class="terms-desc form-color">Uncommon dragons: Estimated delivery within 2-6 weeks.</li>
+                            <li class="terms-desc form-color">Rare dragons: Estimated delivery within 3-4 months.</li>
+                            <li class="terms-desc form-color">Limited dragons: We will contact you when they become available.</li>
+                            <li class="terms-desc form-color">Protected dragons: Delivery may range from several weeks to nearly a year.</li>
+                            <li class="terms-desc form-color">Seasonal dragons: Availability aligns with their breeding seasons; e.g., Northern dragons exclusively available during winter, while some seasonal dragons may be accessible for up to two months.</li>
+                        </ul>
+                    </div>
+
+                    <p class="terms-title form-color">2. Documentation and Permits:</p>
+                    <div class="spacing-terms">
+                        <p class="terms-desc form-color">At the time of pickup, the customer must possess all appropriate documentation, including:</p>
+                        <ul>
+                            <li class="terms-desc form-color">Standard Dragon Ownership License (mandatory).</li>
+                            <li class="terms-desc form-color">Advanced Dragon Ownership License (mandatory if purchasing seasonal, rare, and limited dragons requiring experience).</li>
+                            <li class="terms-desc form-color">Protected Dragon Ownership License (mandatory if purchasing protected dragon breeds).</li>
+                            <li class="terms-desc form-color">Habitat Inspection Report.</li>
+                            <li class="terms-desc form-color">Dragon Transport Permit.</li>
+                            <li class="terms-desc form-color">Proof of Residence.</li>
+                            <li class="terms-desc form-color">Dragon Care and Handling Proficiency Certification (as required for specific dragon breeds).</li>
+                            <li class="terms-desc form-color">Criminal Background Clearance for Protected Dragon Ownership.</li>
+                            <li class="terms-desc form-color">Specialized Dragon Occupation Certification (for those purchasing dragon breeds related to their job occupation).</li>
+                        </ul>
+                    </div>
+
+                    <p class="terms-title form-color">3. Company Liability:</p>
+                    <div class="spacing-terms">
+                        <p class="terms-desc form-color">Ignis Aeternus Company is committed to sourcing the right dragon egg for our customers and ensuring the dragons' well-being during our care and transportation. We are responsible for the dragon's health and safety up until the point of pickup.</p>
+                    </div>
+
+                    <p class="terms-title form-color">4. Deposit and Payment:</p>
+                    <div class="spacing-terms">
+                    <ul>
+                        <li class="terms-desc form-color">Customers are required to pay a deposit of 1/3 of the dragon egg's price upon processing their form.</li>
+                        <li class="terms-desc form-color">This deposit is refundable only if the dragon does not imprint with the customer.</li>
+                        <li class="terms-desc form-color">he deposit will not be returned if the customer chooses to wait for another available dragon egg.</li>
+                        <li class="terms-desc form-color">The remaining 2/3 of the payment is due upon the pickup of the dragon egg.</li>
+                    </ul>
+                    </div>
+
+                    <p class="terms-title form-color">5. Pickup Location:</p>
+                    <div class="spacing-terms">
+                        <p class="terms-desc form-color">Dragon egg pickup is exclusively available at designated Ignis Aeternus Company locations.</p>
+                    </div>
+
+                    <p class="terms-title form-color">6. Ownership Responsibility:</p>
+                    <div class="spacing-terms">
+                        <p class="terms-desc form-color">While Ignis Aeternus Company takes utmost care in providing healthy and ethically sourced dragons, the responsibility for the dragon's health and well-being transfers to the owner upon pickup.</p>
+                        <p class="terms-desc form-color">We offer guidance and resources to support proper care but cannot be held liable for conditions arising after the sale.</p>
+                    </div>
+
+                    <p class="terms-title form-color">7. Insurance and Warranties:</p>
+                    <div class="spacing-terms">
+                        <p class="terms-desc form-color">Ignis Aeternus Company does not currently offer insurance or warranties for dragons purchased from our company.</p>
+                        <p class="terms-desc form-color">We encourage owners to explore third-party insurance options and thoroughly understand any policies they may consider.</p>
+                    </div>
+
+                    <blockquote>
+                        <p class="terms-desc form-color">By submitting this form, you acknowledge that you have read, understood, and agreed to the above terms and conditions. Ignis Aeternus Company reserves the right to update or modify these terms at its discretion, with any changes communicated to customers as necessary.</p>
+                    </blockquote>
+
+                    <div>
+                        <label for="terms-accepted" class="form-color">I acknowledge and accept these terms and conditions. </label>
+                        <input id="terms-accepted" type="checkbox" name="accepted" required>
+                    </div>
+
+                    <div>
+                        <label for="signature" class="form-color">Signature: </label>
+                        <input id="signature" name="signature" required>
+                    </div>
+
+                    <div>
+                        <label for="today" class="form-color">Submission Date: </label>
+                        <input id="today" type="date" name="today" class="calendar" required>
+                    </div>
+                </fieldset>
+
+                <input id="submitForm" type="submit" name="submitForm" value="Complete Form" class="disp-none">
+            </form>
+        </main>
+
+        <footer class="flex flex-column flex-alignc">
+            <div class="rounded footer flex flex-column flex-alignc flex-justcenter">
+                <div class="flex flex-aligns flex-justcenter">
+                    <ul class="foot-bar">
+                        <h4>Company</h4>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About the Company</a></li>
+                        <li><a href="index.html#mission">Our Mission</a></li>
+                        <li><a href="index.html#team">Our Team</a></li>
+                        <li><a href="index.html#community">Our Community</a></li>
+                    </ul>
+                    
+                    <ul class="foot-bar">
+                        <h4>Shopping</h4>
+                        <li><a href="dragons.html#species">About Species</a></li>
+                        <li><a href="dragons.html#availability">About the Availability System</a></li>
+                        <li><a href="dragons.html#catalog">Our Catalog</a></li>
+                    </ul>
+
+                    <ul class="foot-bar">
+                        <h4>Support</h4>
+                        <li><a href="faq.html#faq">Our FAQ</a></li>
+                        <li><a href="faq.html#support">Customer Support</a></li>
+                        <li><a href="faq.html#ethics">Ethical Sourcing Support</a></li>
+                        <li><a href="faq.html#laws">Legal Support</a></li>
+                        <li><a href="faq.html#gen-care">General Support</a></li>
+                        <li><a href="faq.html#eggs">Egg Handling Support</a></li>
+                        <li><a href="faq.html#imprinting">Imprinting Support</a></li>
+                        <li><a href="faq.html#baby-care">Baby Care Support</a></li>
+                        <li><a href="faq.html#warning">FAQ Disclaimer</a></li>
+                    </ul>
+
+                    <ul class="foot-bar">
+                        <h4>Network</h4>
+                        <li><a href="sanctuaries.html#ethical-breeders">About Ethical Breeding</a></li>
+                        <li><a href="sanctuaries.html#slideshow">Sanctuaries Network</a></li>
+                        <li><a href="sanctuaries.html#disclaimer">Ethical Breeding Disclaimer</a></li>
+                    </ul>
+
+                    <ul class="foot-bar">
+                        <h4>Form</h4>
+                        <li><a href="purchase.html">Purchase Form</a></li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="flex flex-alignc flex-justevenly">
+                    <span title="Various ChatGPT sourced content"><a href="https://chat.openai.com/share/bb988495-df4d-447c-8a07-4f1eda8466de"><img src="https://unicons.iconscout.com/release/v4.0.8/svg/line/comment-message.svg" class="source"></a>
+                    <span title="Various ChatGPT sourced content"><a href="https://chat.openai.com/share/a5e9ce28-b54a-4665-acf4-31447fcabe98"><img src="https://unicons.iconscout.com/release/v4.0.8/svg/line/comment-heart.svg" class="source"></a>
+                    <span title="Various ChatGPT sourced content"><a href="https://chat.openai.com/share/0c49d75a-d99d-4482-8972-59dc65cd003a"><img src="https://unicons.iconscout.com/release/v4.0.8/svg/line/comment-question.svg" class="source"></a>
+                    <span title="Various ChatGPT sourced content"><a href="https://chat.openai.com/share/9375dd6c-b85e-4cf2-ae26-c6b234288e0d"><img src="https://unicons.iconscout.com/release/v4.0.8/svg/line/comment-image.svg" class="source"></a>
+                    <span title="Various ChatGPT sourced content"><a href="https://chat.openai.com/share/e736b5d8-bb7c-471d-a268-6b9238adaac6"><img src="https://unicons.iconscout.com/release/v4.0.8/svg/line/comment-lock.svg" class="source"></a>
+                    <span title="Various ChatGPT sourced content"><a href="https://chat.openai.com/share/7d90802f-9380-4a47-832f-bb874e9b9b4e"><img src="https://unicons.iconscout.com/release/v4.0.8/svg/line/comment-shield.svg" class="source"></a>
+                    <span title="Various ChatGPT sourced content"><a href="https://chat.openai.com/share/28cd3b18-1697-42dd-98ec-257fe32ebb1f"><img src="https://unicons.iconscout.com/release/v4.0.8/svg/line/comment-block.svg" class="source"></a>   
+                </div>
+            </div>
+
+            <p class="rounded footer fine-print">Website designed by Emy Pierre-Louis with the help of the Internet and W14's teachings.<br>
+            Let's not forget ChatGPT who worked tiredlessly to give us great literary content.</p>
+        </footer>
+
+        <script src="Scripts\navigation.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+        <script src="Scripts\form.js"></script>
+        <script src="jquery.js"></script>
+        <script src="Scripts\validation.js"></script>
+        <script src="Scripts\plugins.js"></script>
+    </body>
+</html>

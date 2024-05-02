@@ -1,0 +1,32 @@
+/*CSS specific to FAQ section of the website*/
+.faq
+{
+    cursor:crosshair;
+    height: 310px;
+    overflow-y: scroll;
+}
+
+.question
+{
+    transition: 0.5s;
+    padding: 5px 20px 5px 20px;
+    width: 70%;
+}
+
+    .question:hover
+        {
+            background-color: #D5904F;
+            color: #F3EBEA;
+            border-radius: 20px;
+            transform: scale(0.9);
+        }
+
+.answer
+{
+    background-color: #D5904F;
+    font-style: italic;
+    margin-left: 20px;
+    padding: 5px 20px 5px 20px;
+    display: none;
+    width: 80%
+}
